@@ -1,2 +1,3 @@
-# PROG-UD6-Dictionary
-This Duolingo word-keeping app provides a simple system to manage and expand your English vocabulary, allowing you to store, organize and access words you've learned.
+# Duolingo *WordKeeper*
+
+La aplicación Duolingo WordKeeper ofrece a sus usuarios una sencilla plataforma para organizar y enriquecer su vocabulario en inglés, permitiéndoles almacenar, categorizar y acceder a las palabras que van adquiriendo durante su proceso de aprendizaje.
