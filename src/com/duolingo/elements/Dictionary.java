@@ -6,6 +6,8 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import com.duolingo.util.DictionaryException;
+
 public class Dictionary {
 
     private Map<Character, Set<String>> dictionary;
@@ -15,10 +17,14 @@ public class Dictionary {
         this.dictionary = new HashMap<>();
     }
 
-    public void addWord(String word) {
+    public void addWord(String word) throws DictionaryException {
 
         char initial = word.charAt(0);
         Set<String> words = this.dictionary.get(initial);
+
+        if (words != null && words.contains(word)) {
+            throw new DictionaryException("La palabra '" + word + "' ya existe en el diccionario.");
+        }
 
         if (words == null) {
             words = new HashSet<>();
@@ -28,12 +34,20 @@ public class Dictionary {
         words.add(word);
     }
 
-    public void removeWord(String word) {
+    public void removeWord(String word) throws DictionaryException {
 
         char initial = word.charAt(0);
         Set<String> words = this.dictionary.get(initial);
 
+        if (words == null || !words.contains(word)) {
+            throw new DictionaryException("La palabra '" + word + "' no existe en el diccionario.");
+        }
+
         words.remove(word);
+
+        if (words.isEmpty()) {
+            this.dictionary.remove(initial);
+        }
     }
 
     public boolean containsWord(String word) {

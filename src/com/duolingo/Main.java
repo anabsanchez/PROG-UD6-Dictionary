@@ -1,6 +1,7 @@
 package com.duolingo;
 
 import com.duolingo.elements.Dictionary;
+import com.duolingo.util.DictionaryException;
 import com.duolingo.util.InputProcessor;
 
 import java.util.Scanner;
@@ -39,27 +40,31 @@ public class Main {
         System.out.print("-> ");
         String option = scanner.nextLine().toUpperCase();
 
-        switch (option) {
-            case "1": 
-                addWord(dictionary, scanner); 
-                break;
-            case "2": 
-                removeWord(dictionary, scanner); 
-                break;
-            case "3": 
-                checkWord(dictionary, scanner); 
-                break;
-            case "4": 
-                showInitials(dictionary); 
-                break;
-            case "5": 
-                showWordsByInitial(dictionary, scanner); 
-                break;
-            case "Q": 
-                exitProgram(scanner); 
-                break;
-            default:
-                System.out.println("\nOpción inválida. Por favor, seleccione una opción válida.");
+        try {
+            switch (option) {
+                case "1": 
+                    addWord(dictionary, scanner); 
+                    break;
+                case "2": 
+                    removeWord(dictionary, scanner); 
+                    break;
+                case "3": 
+                    checkWord(dictionary, scanner); 
+                    break;
+                case "4": 
+                    showInitials(dictionary); 
+                    break;
+                case "5": 
+                    showWordsByInitial(dictionary, scanner); 
+                    break;
+                case "Q": 
+                    exitProgram(scanner); 
+                    break;
+                default:
+                    System.out.println("\nOpción inválida. Por favor, seleccione una opción válida.");
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
     }
 
@@ -68,8 +73,12 @@ public class Main {
         System.out.println();
         String wordToAdd = InputProcessor.requestWord(scanner);
 
-        dictionary.addWord(wordToAdd);
-        System.out.println("La palabra se ha agregado correctamente al diccionario.");
+        try {
+            dictionary.addWord(wordToAdd);
+            System.out.println("La palabra se ha agregado correctamente al diccionario.");
+        } catch (DictionaryException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     private static void removeWord(Dictionary dictionary, Scanner scanner) {
@@ -77,8 +86,12 @@ public class Main {
         System.out.println();
         String wordToRemove = InputProcessor.requestWord(scanner);
 
-        dictionary.removeWord(wordToRemove);
-        System.out.println("La palabra se ha eliminado correctamente del diccionario.");
+        try {
+            dictionary.removeWord(wordToRemove);
+            System.out.println("La palabra se ha eliminado correctamente del diccionario.");
+        } catch (DictionaryException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     private static void checkWord(Dictionary dictionary, Scanner scanner) {
