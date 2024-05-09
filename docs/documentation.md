@@ -1,5 +1,6 @@
 # Documentación - Duolingo WordKeeper
 
+<br>
 
 ### Clases de Utilidad:
 
@@ -19,6 +20,7 @@ Proporciona métodos para procesar la entrada de palabras y letras desde la cons
 
 - **validateLetter(String input):** Este método privado valida si la entrada es una sola letra minúscula del alfabeto inglés. 
 
+<br>
 
 ### Clases Principales:
 
@@ -39,8 +41,9 @@ Esta clase es responsable de gestionar el diccionario personal del usuario.
 - **getWordsByInitial(char initial):** Obtiene un conjunto de todas las palabras en el diccionario que comienzan con una letra inicial específica. 
 >Si no hay palabras en el diccionario con esa letra inicial, devuelve un conjunto vacío.
 
+<br>
 
-## Clase Ejecutable:
+### Clase Ejecutable:
 
 ## WordKeeperApp
 
@@ -63,3 +66,7 @@ Esta es la clase principal de la aplicación, donde se encuentra la lógica de i
 - **showWordsByInitial(Dictionary dictionary, Scanner scanner):** Permite al usuario obtener las palabras asociadas con una letra inicial específica. 
 
 - **exitProgram(Scanner scanner):** Sale del programa, cierra el Scanner y finaliza la ejecución del programa.
+
+<br>
+
+[<- Volver](../README.md)
