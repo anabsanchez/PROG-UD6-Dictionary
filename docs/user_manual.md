@@ -1,7 +1,5 @@
 # Manual de Usuario - Duolingo WordKeeper
-
-<br>
-
+<br><br>
 **_¡Bienvenido a Duolingo WordKeeper!_**
 
 Esta aplicación te acompañará en tu proceso de adquisición de vocabulario en inglés de una manera sencilla y efectiva, proporcionándote un diccionario personal en el que almacenar, de manera organizada, todas las nuevas palabras que vayas aprendiendo, y permitiéndote acceder a ellas fácilmente. 
@@ -50,7 +48,7 @@ La aplicación te mostrará todas las letras iniciales presentes en el diccionar
 Selecciona la opción _Obtener palabras por inicial_ en el menú.
 Ingresa la letra inicial de la cual deseas obtener las palabras asociadas.
 La aplicación te mostrará todas las palabras que comienzan con la letra inicial ingresada.
-![words-by-initials](./images/words-by-initials.png)
+![words-by-initials](./images/words-by-initial.png)
 
 6. Detener la Simulación:<br>
 En cualquier momento, puedes seleccionar la opción _Detener simulación_ en el menú para salir de la aplicación.
