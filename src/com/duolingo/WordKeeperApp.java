@@ -6,7 +6,7 @@ import com.duolingo.util.InputProcessor;
 
 import java.util.Scanner;
 
-public class Main {
+public class WordKeeperApp {
     
     public static void main(String[] args) {
 
@@ -40,31 +40,27 @@ public class Main {
         System.out.print("-> ");
         String option = scanner.nextLine().toUpperCase();
 
-        try {
-            switch (option) {
-                case "1": 
-                    addWord(dictionary, scanner); 
-                    break;
-                case "2": 
-                    removeWord(dictionary, scanner); 
-                    break;
-                case "3": 
-                    checkWord(dictionary, scanner); 
-                    break;
-                case "4": 
-                    showInitials(dictionary); 
-                    break;
-                case "5": 
-                    showWordsByInitial(dictionary, scanner); 
-                    break;
-                case "Q": 
-                    exitProgram(scanner); 
-                    break;
-                default:
-                    System.out.println("\nOpción inválida. Por favor, seleccione una opción válida.");
-            }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+        switch (option) {
+            case "1": 
+                addWord(dictionary, scanner); 
+                break;
+            case "2": 
+                removeWord(dictionary, scanner); 
+                break;
+            case "3": 
+                checkWord(dictionary, scanner); 
+                break;
+            case "4": 
+                showInitials(dictionary); 
+                break;
+            case "5": 
+                showWordsByInitial(dictionary, scanner); 
+                break;
+            case "Q": 
+                exitProgram(scanner); 
+                break;
+            default:
+                System.out.println("\nOpción inválida. Por favor, seleccione una opción válida.");
         }
     }
 
