@@ -13,7 +13,7 @@ public class WordKeeperApp {
         Dictionary dictionary = new Dictionary();
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("\nDUOLINGO - Simulación de Diccionario");
+        System.out.println("\n| Duolingo WordKeeper |");
 
         while(true) {
             showMenu();
@@ -25,19 +25,19 @@ public class WordKeeperApp {
 
         System.out.print("""
             
-                            Menú de opciones:
-                            1. Agregar palabra.
-                            2. Eliminar palabra.
-                            3. Verificar si existe una palabra.
-                            4. Obtener letras iniciales.
-                            5. Obtener palabras por inicial.
-                            Q. Detener simulación.
+                              Menú de opciones:
+                              1. Agregar palabra.
+                              2. Eliminar palabra.
+                              3. Verificar si existe una palabra.
+                              4. Obtener letras iniciales.
+                              5. Obtener palabras por inicial.
+                              Q. Detener simulación.
                             """);
     }
 
     private static void performAction(Dictionary dictionary, Scanner scanner) {
 
-        System.out.print("-> ");
+        System.out.print("  -> ");
         String option = scanner.nextLine().toUpperCase();
 
         switch (option) {
